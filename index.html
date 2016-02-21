@@ -3,15 +3,15 @@
 	<head>
 		<title>Developer testing for accessibility #A11yTO Meetup</title>
 		<meta charset="utf-8">	<!-- Layout stylesheet -->
-		<link rel="stylesheet" href="../css/font/small.css" type="text/css" media="screen">
-		<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/font/small.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
 		<!-- Theme stylesheet -->
-		<link rel="stylesheet" id="currentCSS" href="../css/themes/default.css" type="text/css" media="all">
-		<link rel="stylesheet" href="../css/print.css" type="text/css" media="print">
+		<link rel="stylesheet" id="currentCSS" href="css/themes/default.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="../AccesSlide.js"></script>
-		<script src="../lang/lang_en.js"></script>
-		<script src="../highlight/highlight.pack.js"></script>
+		<script src="AccesSlide.js"></script>
+		<script src="lang/lang_en.js"></script>
+		<script src="highlight/highlight.pack.js"></script>
 		<script>hljs.initHighlightingOnLoad();</script>
 		<style>
 		.lang-btn{position:absolute;text-decoration:none;font-size:70%;right:20px;border-top:0;padding:0 5px 3px 5px;border-radius:0 0 3px 3px;z-index:900;box-shadow:0 0 2px #999;background:#fafafa}
@@ -32,26 +32,26 @@
 						<li><a href="https://twitter.com/AidanA11y">
 							<span class="icon-fallback-text">
 								<span class="icon icon-twitter" aria-hidden="true"></span>
-								<img class="text" src="../img/twitter.png" alt="" />
+								<img class="text" src="img/twitter.png" alt="" />
 							</span>
 						AidanA11y</a></li>
 						<li><a href="https://twitter.com/ajarvis728">
 							<span class="icon-fallback-text">
 								<span class="icon icon-twitter" aria-hidden="true"></span>
-								<img class="text" src="../img/twitter.png" alt="" />
+								<img class="text" src="img/twitter.png" alt="" />
 							</span>
 						AJarvis728</a></li>
 						<li><a href="https://twitter.com/JohnKMcNabb">
 							<span class="icon-fallback-text">
 								<span class="icon icon-twitter" aria-hidden="true"></span>
-								<img class="text" src="../img/twitter.png" alt="" />
+								<img class="text" src="img/twitter.png" alt="" />
 							</span>
 						JohnKMcNabb</a></li>
 						
 						<!-- 	<li><a href="https://github.com/access42/" lang="en">
 							<span class="icon-fallback-text">
-									<span class="icon icon-github" aria-hidden="true"></span>
-									<img class="text" src="../img/github.png" alt="" />
+														<span class="icon icon-github" aria-hidden="true"></span>
+														<img class="text" src="img/github.png" alt="" />
 							</span>
 						Github</a></li> -->
 						<li><a href="http://www.meetup.com/a11yTo/events/228938214/">Meetup</a></li>
@@ -68,119 +68,226 @@
 				<p class="subtitle">#A11yTO: Toronto Accessibility &amp; Inclusive Design Meetup</p>
 				<p class="small">February 24, 2016</p>
 				<div class="presenters">Aidan Tierney, Alicia Jarvis &amp; John McNabb</div>
-				
-				
 			</section>
-			
 			<section class="slide">
-				<h2>Test-driven development principles</h2>
-				<p>Put the slides in the <code>main</code> element with <code>section</code> elements associated with a <code>slide</code> class.</p>
-				<p>The first and the last slide have an extra class: respectively a <code>couv</code> and <code>end</code> class.</p>
-				<p><code>section</code> elements can be imbricated in <code>section</code> elements.</p>
+				<h2>How to make a cup of tea</h2>
+				<p>An non-techie example to get us started</p>
+				<img src="img_slide/Teabag-Mug.jpg" alt="empty mug with drawing of teabag" />
 			</section>
+			<section class="slide">
+				<h2>Boil water (easy)</h2>
+				<p>Just do it</p>
+				<img src="img_slide/rh-kettle.jpg" "Electric kettle, modern design" />
+			</section>
+			<section class="slide">
+				<h2>Boil water (hard)</h2>
+				<p>Electric, digital, stovetop, whistling, chiming , clicking</p>
+				<img src="img_slide/kettles.png" "24 different types of kettles" />
+			</section>
+			<section class="slide">
+				<h2>In the end, it's about the tea</h2>
+				<p>Different techniques, different technology</p>
+				<p>Basics skills are needed, but the tea is what matters</p>
+				<img src="img_slide/cup-of-tea-1321297-639x392.jpg" "Tea and cake" />
+			</section>
+			<section class="slide">
+				<h2>Allowing tests and behaviour to drive development</h2>
+				<h3 class="Cmasque">Creating tests <strong>before we build</strong></h3>
+				<p class="Cmasque">Define pass/fail tests</p>
+				<p class="Cmasque">Level of <em>detail</em> may differ for:
+					<ul class=" Cmasque">
+						<li>Native HTML / Standard OS UI controls</li>
+						<li>Custom widgets and controls</li>
+					</ul></p>
+					<p class="Cmasque">Developers and accessibility specialists will create tests</p>
+				</section>
+				<section class="slide">
+					<h2>Semantics &amp; behaviour</h2>
+					<h3>HTML 5.1 Specification</h3>
+					<blockquote>HTML conveys <strong>meaning</strong>, rather than presentation. Elements, attributes, and attribute values in HTML are defined to have certain meanings <strong>(semantics)</strong>. For example, the <code>ol</code> element represents an ordered list, and the <code>lang</code> attribute represents the language of the content.<br />
+						<a href="https://w3c.github.io/html/dom.html#elements-semantics">w3c.github.io/html/dom.html#elements-semantics</a>
+					</blockquote>
+					<h3>WAI-ARIA</h3>
+					<p>WAI-ARIA describes how to add semantics and other metadata to HTML content in order to make user interface controls and dynamic content more accessible. </p>
+					
+				</section>
+				
+				<section class="slide">
+					<h2>Developer accessibility checks</h2>
+					
+					<h3 class="Cmasque">Automated syntax checking</h3>
+					<p class="small Cmasque">Executes within seconds. Integrates accessibility testing into existing functional tests.</p>
+					<p class="small Cmasque">We can leverage work of others - we're not going to be writing these.</p>
+					<h3 class="Cmasque">Manual checks and inspection</h3>
+					<p class="small Cmasque"><strong>Keyboard</strong>.  Inspection tools to quickly reveal accessibility information.</p>
+					<h3 class="Cmasque">Assistive Technology</h3>
+					<p class="small Cmasque"><strong>Screen readers</strong>, Zoom, Switch, Voice input.</p>
+				</section>
+				<section class="slide">
+					<h2>Automated syntax checking</h2>
+					<h3>Tenon</h3>
+					<ul class="small">
+						<li>Gulp, Grunt, Node, Protractor, Ruby, WordPress, Visual Studio, browser plugins for Chrome, Firefox </li>
+						<li><a href="http://www.tenon.io/">tenon.io</a></li>
+					</ul>
+					<h3>aXe</h3>
+					<ul class="small">
+						<li>Karma, QUnit, Jasmine, Mocha, R-Spec, Cucumber, Selenium Java, Selenium JavaScript, PhantomJS</li>
+						<li>Chrome developer tools extension</li>
+						<li><a href="http://www.deque.com/products/axe/">deque.com/products/axe/</a></li>
+					</ul>
+				</section>
+				<section class="slide">
+					<h2>Automated syntax checking - more</h2>
+					
+					<h3>AMP</h3>
+					<ul class="small">
+						<li><a href="http://www.ssbbartgroup.com/amp/">ssbbartgroup.com/amp/</a></li>
+					</ul>
+					<h3>Chrome Accessibility Developer Tools</h3>
+					<ul class="small">
+						<li><a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en">Chrome Extension</a></li>
+						<li><a href="https://github.com/GoogleChrome/accessibility-developer-tools">github.com/GoogleChrome/accessibility-developer-tools</a></li>
+					</ul>
+					<h3>WAVE</h3>
+					<ul class="small">
+						<li><a href="http://wave.webaim.org/extension/">wave.webaim.org/extension/</a></li>
+					</ul>
+				</section>
 
-						<section class="slide">
-				<h2>Semantics &amp; behavior</h2>
-				<h3>HTML 5.1 Specification</h3>
-				<blockquote>HTML conveys <strong>meaning</strong>, rather than presentation. Elements, attributes, and attribute values in HTML are defined to have certain meanings <strong>(semantics)</strong>. For example, the <code>ol</code> element represents an ordered list, and the <code>lang</code> attribute represents the language of the content.<br />
-<a href="https://w3c.github.io/html/dom.html#elements-semantics">w3c.github.io/html/dom.html#elements-semantics</a>
-</blockquote>
+								<section class="slide">
+					<h2>Check it out yourself: before &amp; after demos</h2>
+					<p>Quick demo -   automated tools</p>
+					<ul class="small">
+						<li><a href="https://www.w3.org/WAI/demos/bad/">w3.org/WAI/demos/bad/</a></li>
+	<li><a href="https://chrome.google.com/webstore/detail/tenon-check/bmibjbhkgepmnehjfhjaalkikngikhgj">Tenon Check Chrome Extension</a></li>
+		<li><a href="https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd">aXe Chrome Extension from Deque</a></li>
 
-<h3>WAI-ARIA</h3>
-<p>WAI-ARIA describes how to add semantics and other metadata to HTML content in order to make user interface controls and dynamic content more accessible. </p>
+
+					</ul>
+					<p>These browser extensions are useful, but the  real value in Tenon and aXe comes when they are integrated and automated into your workflow including functional testing</p>
+
+					<p class="small">Gulp, Grunt, Node, Protractor, Ruby, WordPress, Visual Studio, Karma, QUnit, Jasmine, Mocha, R-Spec, Cucumber, Selenium</p>
 			
-			</section>
-			
-			<section class="slide">
-				<h2>Developer accessibility checks</h2>
+				</section>
 				
-				<h3 class="Cmasque">Automated syntax checking</h3>
-				<p class="small Cmasque">Executes within seconds. Integrates accessibility testing into existing functional tests.</p>
-				<h3 class="Cmasque">Manual checks and inspection</h3>
-				<p class="small Cmasque"><strong>Keyboard</strong>.  Inspection tools to quickly reveal accessibility information.</p>
-				<h3 class="Cmasque">Assistive Technology</h3>
-				<p class="small Cmasque"><strong>Screen readers</strong>, Zoom, Switch, Voice input.</p>
-			</section>
-			<section class="slide">
-				<h2>Automated syntax checking</h2>
-				<h3>Tenon</h3>
-				<ul class="small">
-					<li>Gulp, Grunt, Node, Protractor, Ruby, Wordpress, Visual Studio, browser plugins for Chrome, Firefox </li>
-					<li><a href="http://www.tenon.io/">tenon.io</a></li>
-				</ul>
-				<h3>aXe</h3>
-				<ul class="small">
-					<li>Karma, QUnit, Jasmine, Mocha, R-Spec, Cucumber, Selenium Java, Selenium JavaScript, PhantomJS</li>
-					<li>Chrome developer tools extension</li>
-					<li><a href="http://www.deque.com/products/axe/">deque.com/products/axe/</a></li>
-				</ul>
-				
-				
-			</section>
-			<section class="slide">
-				<h2>Automated syntax checking - more</h2>
-				
-				<h3>AMP</h3>
-				<ul class="small">
-					<li><a href="http://www.ssbbartgroup.com/amp/">ssbbartgroup.com/amp/</a></li>
-				</ul>
-				<h3>Chrome Accessibility Developer Tools</h3>
-				<ul class="small">
-					<li><a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en">Chrome Extension</a></li>
-					<li><a href="https://github.com/GoogleChrome/accessibility-developer-tools">github.com/GoogleChrome/accessibility-developer-tools</a></li>
-				</ul>
-				<h3>WAVE</h3>
-				<ul class="small">
-					<li><a href="http://wave.webaim.org/extension/">wave.webaim.org/extension/</a></li>
+				<section class="slide">
+					<h2>Manual checks and inspection</h2>
+					<h3>Keyboard</h3>
+					<ul class="small">
+						<li>Ensure that all content can be accessed with the keyboard alone.</li>
+						<li>ensure all interactions are predictable. This requires an understanding of common keyboard interactions.</li>
+						<li><a href="http://webaim.org/techniques/keyboard/#testing">webaim.org/techniques/keyboard/</a></li>
+					</ul>
+					<h3>Inspection Tools</h3>
+					<ul class="small">
+						<li>Accessibility Inspector: Debug Accessibility in iOS Simulator <br /><a href="https://developer.apple.com/library/ios/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityiniOSSimulatorwithAccessibilityInspector/TestAccessibilityiniOSSimulatorwithAccessibilityInspector.html">developer.apple.com</a></li>
+						<li>aViewer (Windows): displays the accessibility API information (MSAA, IAccessible2, UI Automation, ARIA, HTML DOM) exposed by web browsers to the operating system, and thus to any assistive technology<br /><a href="https://www.paciellogroup.com/resources/aviewer/">paciellogroup.com/resources/aviewer/</a></li>
+						<li>Browser extensions and toolbars</li>
+					</ul>
+				</section>
+				<section class="slide">
+					<h2>A basic HTML dropdown</h2>
+					<p>The <code>select</code> element has built-in keyboard support</p>
+					<ul class="small">
+						<li><kbd>tab</kbd> - takes focus (and <kbd>shift</kbd> + <kbd>tab</kbd> in reverse)</li>
+						<li><kbd>spacebar</kbd> - expand  (also <kbd>alt</kbd> + <kbd>↑</kbd> <kbd>↓</kbd> ) </li>
+						<li><kbd>↑</kbd> <kbd>↓</kbd> - navigate between menu options</li>
+						<li>Visual indicator as move between options</li>
+						<li><kbd>spacebar</kbd> confirms selection (<kbd>enter</kbd> on MAC)</li>
+						<li>Pressing any letter key (e.g. <kbd>c</kbd>) jumps to an option if it begins with that letter - behaviour varies by browser</li>
+					</ul>
+					<p class="small"><strong>Note:</strong> Many of these key interactions would have different behaviour if the <code>select</code>  did not have focus. E.g. <kbd>spacebar</kbd>  or <kbd>↓</kbd> will move you down the screen.</p>
+
+				</section>
+				<section class="slide">
+					<h2><code>select</code> example</h2>
+					<p>tbc - show live demo</p>
+				</section>
+				<section class="slide">
+					<h2>Custom dropdowns</h2>
+					<p>jQuery and other custom elements</p>
+					<p>We need to <strong>define</strong> and support keyboard interactions</p>
+					<p>We can define interactions (and create simple pass/fail tests) <strong>before</strong> we build it</p>
+					<p>ARIA does not magically make any element act differently to what it is</p>
+					<p><a href="https://www.paciellogroup.com/blog/2014/08/what-aria-does-not-do/">What ARIA does not do</a> and <a href="https://www.paciellogroup.com/blog/2014/08/what-aria-does-not-do/">Just use a (native HTML) button</a></p>
+					<p>Prevent used key events from performing browser functions</p>
+					<!-- <pre><code class="hljs html">
+<span class="hljs-class">.icon-setting-sound</span><span class="hljs-pseudo">:before</span><span class="hljs-rules">{
+	<span class="hljs-rule"><span class="hljs-attribute">content</span>:<span class="hljs-value"> <span class="hljs-string">"\f028"</span></span></span>;
+<span class="hljs-rule">}</span></span></code>
+</pre>
+			<code class="html hljs xml"><input type="text" onkeydown="myFunction(event)"> 
+
+function myFunction(event) {
+    var x = event.keyCode;
+    if (x == 27) {  // 27 is the ESC key
+        alert ("You pressed the Escape key!");
+    }
+}</code> -->
+
+<p><a href="http://www.javascripter.net/faq/keycodes.htm">javascripter.net/faq/keycodes.htm</a></p>
 					
-				</ul>
-			</section>
-			
-			<section class="slide">
-				<h2>Manual checks and inspection</h2>
+				</section>
+
+								<section class="slide">
+					<h2>jQuery example</h2>
+					<p>tbc - show live demo</p>
+				</section>
+
+								<section class="slide">
+					<h2><code>ARIA</code> resources</h2>
+					<p>ARIA: Providing Keyboard Navigation for Widgets<br /><a href="https://www.w3.org/TR/wai-aria-practices/#kbd_generalnav">w3.org/TR/wai-aria-practices/#kbd_generalnav</a></p>
+								<p>Keyboard-navigable JavaScript widgets<br /><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets">developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets</a></p>	 
+				</section>
+
+								<section class="slide">
+					<h2>Testing with Assistive Technology: Screen readers</h2>
+					<p>tbc </p>
+				</section>
+
+
+				<section class="slide">
+					<h2>Resources</h2>
+					<p>tbd</p>
+					<ul>
+						<li>Notes on Using ARIA in HTML  <a href="https://www.w3.org/TR/aria-in-html/ ">w3.org/TR/aria-in-html/ </a></li>
+						<li>WAI-ARIA 1.0 User Agent Implementation Guide <a href="https://www.w3.org/WAI/PF/aria-implementation/">w3.org/WAI/PF/aria-implementation/</a></li>
+						<li>Android Accessibility Testing Checklist  <a href="http://developer.android.com/training/accessibility/testing.html ">developer.android.com/training/accessibility/testing.html</a></li>
+						<li><a href="https://developer.apple.com/library/ios/technotes/TestingAccessibilityOfiOSApps/TestingtheAccessibilityofiOSApps/TestingtheAccessibilityofiOSApps.html#//apple_ref/doc/uid/TP40012619-CH2-SW2">Verifying App Accessibility on iOS</a></li>
+						<li><strong>iOS Accessibility WWDC 2015 video</strong>  <a href="https://developer.apple.com/videos/play/wwdc2015-201/ ">developer.apple.com/videos/play/wwdc2015-201/</a></li>
+						<li class="small">AccesSlide - accessible HTML presentation framework  <a href="https://github.com/access42/AccesSlide">github.com/access42/AccesSlide</a></li>
+						
+					</ul>
+				</section>
 				
-				<h3>Keyboard</h3>
-				<ul class="small">
-					<li>Ensure that all content can be accessed with the keyboard alone.</li>
-					<li><a href="http://webaim.org/techniques/keyboard/#testing">webaim.org/techniques/keyboard/</a></li>
-					
-				</ul>
-				<h3>Inspection Tools</h3>
-				<ul class="small">
-					
-					<li>Accessibility Inspector: Debug Accessibility in iOS Simulator <br /><a href="https://developer.apple.com/library/ios/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityiniOSSimulatorwithAccessibilityInspector/TestAccessibilityiniOSSimulatorwithAccessibilityInspector.html">developer.apple.com</a></li>
-					<li>aViewer (Windows): displays the accessibility API information (MSAA, IAccessible2, UI Automation, ARIA, HTML DOM) exposed by web browsers to the operating system, and thus to any assistive technology<br /><a href="https://www.paciellogroup.com/resources/aviewer/">paciellogroup.com/resources/aviewer/</a></li>
-					<li>Browser extensions and toolbars</li>
-					
-				</ul>
-			</section>
-			
-			<section class="slide end noprint">
-				<h2 class="end-title">Thats all from us!</h2>
-				<p class="subtitle">#A11yTO: Toronto Accessibility &amp; Inclusive Design Meetup</p>
 				
-				
-				<ul>
+				<section class="slide end noprint">
+					<h2 class="end-title">Thats all from us!</h2>
+					<p class="subtitle">#A11yTO: Toronto Accessibility &amp; Inclusive Design Meetup</p>
 					
-					<li>Aidan Tierney <a href="https://twitter.com/AidanA11y">@AidanA11y</a></li>
-					<li>Alicia Jarvis <a href="https://twitter.com/ajarvis728">@AJarvis728</a></li>
-					<li>John McNabb <a href="https://twitter.com/JohnKMcNabb">@JohnKMcNabb</a></li>
-				</ul>
+					
+					<ul>
+						
+						<li>Aidan Tierney <a href="https://twitter.com/AidanA11y">@AidanA11y</a></li>
+						<li>Alicia Jarvis <a href="https://twitter.com/ajarvis728">@AJarvis728</a></li>
+						<li>John McNabb <a href="https://twitter.com/JohnKMcNabb">@JohnKMcNabb</a></li>
+					</ul>
+					
+				</section>
 				
-			</section>
-			
-			</main>
+				</main>
+				
+			</div>
+			<div id="setting" class="tool-block tool-block-settings " role="dialog" tabindex="-1" style="display:none"></div>
 			
 		</div>
-		<div id="setting" class="tool-block tool-block-settings " role="dialog" tabindex="-1" style="display:none"></div>
-		
-	</div>
-	<div id="Caudio"></div>
-	<div id="Dcourante" aria-live="polite" aria-atomic="true" aria-hidden="true"></div>
-	<script src="slide.js"></script>
-	<script src="../afontgarde.js"></script>
-	<script>
-	AFontGarde( 'FontAwesome', '\f0d9\f0da');
-	</script>
-</body>
+		<div id="Caudio"></div>
+		<div id="Dcourante" aria-live="polite" aria-atomic="true" aria-hidden="true"></div>
+		<script src="slide.js"></script>
+		<script src="afontgarde.js"></script>
+		<script>
+		AFontGarde( 'FontAwesome', '\f0d9\f0da');
+		</script>
+	</body>
 </html>

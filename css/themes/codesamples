@@ -1,0 +1,6 @@
+.example
+a:focus,
+select:focus,
+button:focus {
+	outline: 2px solid green;
+}

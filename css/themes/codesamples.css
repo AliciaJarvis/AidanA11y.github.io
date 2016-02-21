@@ -1,0 +1,29 @@
+body {
+font-size: 1em;
+font-family: sans-serif;
+
+}
+div.example {
+	margin: 2em;
+}
+
+.example
+a:focus,
+select:focus,
+button:focus {
+	outline: 2px solid blue;
+}
+
+label {
+margin: 0.5em;
+font-weight: bold;
+
+
+}	
+
+select {
+	font-size: 2em;
+}
+option {
+	font-size: 2em;
+}
