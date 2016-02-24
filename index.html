@@ -70,38 +70,52 @@
 			<section class="slide">
 				<h2>How to make a cup of tea</h2>
 				<p>An non-techie example to get us started</p>
-				<img src="img_slide/Teabag-Mug.jpg" alt="empty mug with drawing of teabag" />
+				<img src="img_slide/Teabag-Mug.jpg" alt="Empty mug with drawing of teabag" />
 			</section>
 			<section class="slide">
 				<h2>Boil water (easy)</h2>
 				<p>Just do it</p>
-				<img src="img_slide/rh-kettle.jpg" "Electric kettle, modern design" />
+				<img src="img_slide/rh-kettle.jpg" alt="Electric kettle, modern design" />
 			</section>
 			<section class="slide">
 				<h2>Boil water (hard)</h2>
 				<p>Electric, digital, stovetop, whistling, chiming, clicking</p>
-				<img src="img_slide/kettles.png" "24 different types of kettles" />
+				<img src="img_slide/kettles.png" alt="24 different types of kettles" />
 			</section>
 			<section class="slide">
 				<h2>In the end, it's about the tea not the kettle</h2>
 				<p>Different technology, different techniques</p>
 				<p>Basics skills are needed, but the tea is what matters</p>
-				<img src="img_slide/cup-of-tea-1321297-639x392.jpg" "Tea and cake" />
+				<img src="img_slide/cup-of-tea-1321297-639x392.jpg" alt="Tea and cake" />
 			</section>
-			<section class="slide">
-				<h2>Accessibility in Test Driven and Behaviour Driven Development</h2>
-				<h3 class="Cmasque">Create accessibility tests (or scenarios, specifications) <strong>before we build</strong></h3>
-				<ul>
-					<li class="Cmasque">These will drive what we build</li>
-					<li class="Cmasque">Pass/fail. Very specific</li>
-					<li class="Cmasque">Collaboration between developers and accessibility specialists</li>
-					<li class="Cmasque">Level of <em>detail</em> may differ for:
-						<ul class=" Cmasque">
-							<li>Native HTML / Standard OS UI controls</li>
-							<li>Custom widgets and controls</li>
-						</ul></li>
-					</ul>
-				</section>
+		<section class="slide">
+<h2>Allowing tests and behaviour to drive development</h2>
+<p class="Cmasque">Individuals and interactions<strong> over processes and tools</strong></p> </section>
+<section class="slide"> <h2>In your experience, when does accessibility testing typically occur?...</h2> <ul class="Cmasque"> <li>Before development</li> <li>During development</li> <li>During QA Testing Phase</li> <li>Not sure...sometime before deployment I think</li></ul></section>
+<section class="slide"> <h2>The Problem is...</h2> <p class="Cmasque">We are testing <strong> too late! Why?</strong></p><p class="Cmasque">Accessibility Issues are Predictable<strong> Why are we waiting?</strong></p><p class="Cmasque">Defect triage and remediation is costly &amp; <strong> impedes time-to-market</strong></p> </section>
+<section class="slide"> <h2>I <strong>Always</strong> See the <strong> Same</strong> issues</h2> <ul class="Cmasque"> <li>Alt text</li><li>Headings</li><li>Form labels</li><li>Role &amp; state</li><li>Focus Management</li></ul></section>
+<section class="slide"> <h2>How many of you have heard/said this before:</h2> <p class="Cmasque">Well…. It wasn’t included in the requirements…..so….why do I need to log a defect/fix it?</p></section>
+<section class="slide"> <h2>Introduction to Agile (Extreme) Accessibility</h2> <h3 class="Cmasque">Agile Methodology &amp; Mindset</h3><p class="Cmasque">Encourages rapid and flexible response to change</p><ul class="Cmasque"><li><strong>Individuals and interactions</strong> over processes and tools</li><li><strong>Working software</strong> over comprehensive documentation</li><li><strong>Customer collaboration</strong> over contract negotiation</li><li><strong>Responding to change</strong> over following a plan</li></ul><p class="Cmasque">That is, while there is value in the items on the right, <strong>We value the items on the left more.</strong></p></section>
+<section class="slide"><h2>Sample User Stories</h2> <p class="Cmasque">As keyboard-only user, I want to know where I am on the screen at all times so that I know what I can do and how to do it.</p> <p class="Cmasque">As a screen reader user, I want to know what each form label is for each form field so that I can effectively enter the correct information in the form.</p><p class="Cmasque">As a keyboard-only user, I want the ability to use the enter key to open the selected link so that every link on a page is accessible using a keyboard as it would be with a left mouse click</p></section>
+<section class="slide"> <h2> Whole Team Approach to Accessibility</h2> <h3 class="Cmasque">Requires a cohesive and collaborative approach to testing that involves creating 6 feedback points that feed into the others.</h3> <ul class ="Cmasque"> <li>Sprint Planning</li><li>Design</li><li>Development</li><li>Testing</li><li>Continuous Integration</li> <li>Sprint Review &amp; Retrospective</li></ul></section>
+<section class="slide"> <h2>Sprint Planning</h2> <p class="Cmasque">At the beginning of each sprint, the team holds a sprint planning session that:</p>  <ul class="Cmasque">  <li>Communicates the scope of work likely during that sprint</li><li>Selects product backlog items that likely can be done</li> <li>Prepares the sprint backlog that details the work needed to finish the selected product backlog items, with the entire team</li> <li>Defines tasks related to each backlog item</li></ul> <p class="Cmasque">Provides an opportunity to identify and refine accessibility-related tasks and user stories</p></section>
+<section class="slide"><h2>Design &amp; Development</h2><p class="Cmasque"><strong>Design</strong> - must adhere to the user stories defined for the product.  UX and usability studies are implemented here and this offers the first opportunity to verify quality of a previous feedback cycle.</p> <p class="Cmasque"><strong>Development</strong> - Code should never be committed that doesn’t pass automated tests, because letting these defects pass into the next feedback loop will significantly increase cost and risk. It is critical, in this phase, to leverage a tool that can integrate directly into their task runners to shorten the cycle for accessibility feedback.</p> </section>
+<section class="slide"> <h2>Testing and Continuous Integration</h2><p class="Cmasque"><strong>Testing</strong> - the same inputs that were generated during user stories and used during development will form the basis for acceptance tests. Automation scripts should use the same tests as those used in development. In cases where user stories or criteria cannot be fed into automation, Testers will create manual test cases and/or utilize those specifications as acceptance test scripts such as with Selenium.</p> <p class="Cmasque"><strong>
+Continuous Integration</strong> - provides an opportunity to catch regressions in code before it is deployed using the same automation scripts used by development and QA staff. This prevents critical flaws from entering production.</p> </section>
+
+<section class="slide"> <h2>Test-driven development (TDD)</h2> <p class="Cmasque">Software development process that relies on the repetition of a very short development cycle.</p> <p class="Cmasque">The developer: <ul class="Cmasque"> <li> First, writes an (initially failing) automated test case that defines a desired improvement or new function;</li> <li>Then, produces the minimum amount of code to pass that test;</li><li>Finally, refactors the new code to acceptable standards.</li> </ul> <p class="Cmasque">Test-driven development is related to the test-first concepts of extreme programming, begun in 1999, but more recently has created more general interest in its own right</p></section>  
+<section class="slide"> <h2>Creating tests <strong>before we build</strong></h2>
+<p class="Cmasque">Define pass/fail tests</p>
+<p class="Cmasque">Level of <em>detail</em> may differ for:</p>
+	<ul class="Cmasque">
+		<li>Native HTML / Standard OS UI controls</li>
+		<li>Custom widgets and controls</li>
+	</ul>
+	<p class="Cmasque">Developers and accessibility specialists will create tests</p>
+</section>
+
+
+
 				<section class="slide">
 					<h2>Developer accessibility checks</h2>
 					<h3 class="Cmasque">Automated syntax checking</h3>
@@ -198,15 +212,17 @@
 					</section>
 					<section class="slide">
 						<h2><code>select</code> examples</h2>
-						<p>Go to <a target="_new" href="select-element.html">demo</a></p>
+						<p>Go to <a target="_blank" href="select-element.html">demo</a></p>
 					</section>
 					<section class="slide">
 						<h2>WAI-ARIA</h2>
 						<p>WAI-ARIA describes how to add semantics and other metadata to HTML content in order to make user interface controls and dynamic content more accessible. </p>
 						<p>ARIA does not magically make any element act differently to what it is</p>
 						<p><a href="https://www.paciellogroup.com/blog/2014/08/what-aria-does-not-do/">What ARIA does not do</a> and <a href="https://www.paciellogroup.com/blog/2014/08/what-aria-does-not-do/">Just use a (native HTML) button</a></p>
+						<ul>
 						<li>Notes on Using ARIA in HTML (a.k.a. The 5 rules of ARIA use) <a href="https://www.w3.org/TR/aria-in-html/ ">w3.org/TR/aria-in-html/ </a></li>
 						<li>WAI-ARIA 1.0 User Agent Implementation Guide <a href="https://www.w3.org/WAI/PF/aria-implementation/">w3.org/WAI/PF/aria-implementation/</a></li>
+						</ul>
 					</section>
 					<section class="slide">
 						<h2>Custom dropdowns</h2>
@@ -290,7 +306,7 @@
 							<h3>Keyboard</h3>
 							<p class="small">Define 3 keyboard tests <strong>before</strong> testing a modal.<br /><a href="https://dequeuniversity.com/library/aria/popups-dialogs/sf-modal-dialog">dequeuniversity.com/library/aria/popups-dialogs/sf-modal-dialog</a></p>
 							<h3>Screen reader (NVDA, VoiceOver, TalkBack etc)</h3>
-							<p class="small">Define 3 tests <strong>before</strong> testing a small unit from <a href="https://www.w3.org/WAI/demos/bad/">w3.org/WAI/demos/bad/</a></strong></p>
+							<p class="small">Define 3 tests <strong>before</strong> testing a small unit from <a href="https://www.w3.org/WAI/demos/bad/">w3.org/WAI/demos/bad/</a></p>
 						</section>
 						
 						<section class="slide end noprint">
