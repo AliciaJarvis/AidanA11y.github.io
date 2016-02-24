@@ -111,7 +111,9 @@ button:focus {
 }
 
 
-
+h3 a {
+	color: #fff;
+	}
 
 
 button {
@@ -156,16 +158,17 @@ font-family: 'os-regular';
 
 }
 
+.date {
+	margin-bottom: 2em;
+	font-size: 90%;
+}
 
 
 .presenters {
-	padding: 5px 5px 5px 5px;
 
-	float: left;
-	margin-bottom: 0.5em;
-	margin-top: 1.3em;
+
 	font-size: 1.2em;
-	background: #fff;
+
 	color: #666;
 	-webkit-font-feature-settings: "c2sc";
 	-moz-font-feature-settings: "c2sc";
@@ -174,7 +177,22 @@ font-family: 'os-regular';
 	font-weight: normal;
 	font-family: 'os-regular';
 	background: #F9F9F9;
+	line-height: 1.5em;
 }
+
+.slideurl {
+	font-size: 1.2em;
+
+	color: #666;
+	-webkit-font-feature-settings: "c2sc";
+	-moz-font-feature-settings: "c2sc";
+	font-feature-settings: "c2sc";
+	font-variant: small-caps;
+	font-weight: normal;
+	font-family: 'os-regular';
+	background: #F9F9F9;
+	line-height: 1.5em;
+	margin-top: 2em;
 }
 
 code,
@@ -343,6 +361,9 @@ h6 {
 .slide .small * {
 	font-size: 100%;
 	font-weight: normal;
+}
+.slide .xsmall {
+	font-size: 70%;
 }
 
 label.example {
