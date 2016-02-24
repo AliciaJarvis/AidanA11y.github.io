@@ -169,7 +169,7 @@ font-family: 'os-regular';
 
 	font-size: 1.2em;
 
-	color: #666;
+	color: #333;
 	-webkit-font-feature-settings: "c2sc";
 	-moz-font-feature-settings: "c2sc";
 	font-feature-settings: "c2sc";
@@ -183,7 +183,7 @@ font-family: 'os-regular';
 .slideurl {
 	font-size: 1.2em;
 
-	color: #666;
+	color: #333;
 	-webkit-font-feature-settings: "c2sc";
 	-moz-font-feature-settings: "c2sc";
 	font-feature-settings: "c2sc";
@@ -380,7 +380,7 @@ margin: 2em;
 
 .main-header h1 {
 	font-size: 2vh;
-	color: #666;
+	color: #333;
 	font-weight: normal;
 	float: right;
 }
